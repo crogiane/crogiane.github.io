@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+.top {
+    /* display: grid; */
+    display: inline-block;
+}
+header {
+    background-color: aqua;
+    /* display: grid; */
+    /* box-sizing: content-box; */
+}
+.whitoutmargin {
+    margin: 0;
+}
+/* #logos {
+    height: 15px;
+} */
+.face {
+    /* box-sizing: content-box; */
+}
+#name {
+    margin: 0;
+    /* box-sizing: content-box; */
+}
+header #redes {
+    display: inline-block;
+}
