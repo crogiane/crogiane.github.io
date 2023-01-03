@@ -1,28 +1,41 @@
 body {
     margin: 0;
 }
-.top {
-    /* display: grid; */
-    display: inline-block;
+.head {
+    display: flex;
+    align-items: center;
 }
 header {
     background-color: aqua;
-    /* display: grid; */
-    /* box-sizing: content-box; */
 }
-.whitoutmargin {
-    margin: 0;
+.head #logoname {
+    position: relative;
 }
-/* #logos {
-    height: 15px;
-} */
-.face {
-    /* box-sizing: content-box; */
+#facetop {
+    margin: 5px;
+    height: 50px;
+    border-radius: 25px;
+    overflow: hidden;
 }
-#name {
-    margin: 0;
-    /* box-sizing: content-box; */
+header .head #logoname #nametop {
+    position: absolute;
+    left: 57px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+#spacetop {
+    width: 674px;
 }
 header #redes {
-    display: inline-block;
+  
+}
+.keywords {
+    border: 0;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 6px;
+    padding-left: 6px;
+    background-color: aqua;
 }
