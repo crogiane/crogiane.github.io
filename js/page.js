@@ -1,9 +1,8 @@
 var acerca = document.getElementById("aboutHe");
 var blog = document.getElementById("personalBlog");
-var pro = document.getElementById("lIn");
-var hub = document.getElementById("gitHub");
 var touch = document.getElementById("callHim");
 var lienzo = document.getElementById("mostrar");
+var red = document.getElementById("web");
 
 function mostrarOrigen()
 {
@@ -13,21 +12,16 @@ function mostrarBlog()
 {
     lienzo.innerHTML = "link del blog";
 }
-function mostrarPortafolio()
-{
-    lienzo.innerHTML = "link de linkedIn";
-}
-function mostrarDev()
-{
-    lienzo.innerHTML = "link de GitHub";
-}
 function mostrarRedes()
 {
     lienzo.innerHTML = "gmail, numero y otras redes";
 }
+function palos()
+{
+    lienzo.innerHTML = "feisbuk, tuiter y jemail";
+}
 
 acerca.addEventListener("click", mostrarOrigen);
 blog.addEventListener("click", mostrarBlog);
-pro.addEventListener("click", mostrarPortafolio);
-hub.addEventListener("click", mostrarDev);
 touch.addEventListener("click", mostrarRedes);
+red.addEventListener("click", palos);
