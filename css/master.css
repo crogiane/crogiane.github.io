@@ -1,3 +1,4 @@
+/* Estilos globales / Generales */
 :root {
     --electric-blue: #1A374D;
     --soft-blue: #406882;
@@ -22,28 +23,31 @@ body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
 }
+
+/* Navbar general */
 nav {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto;
     height: 60px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: var(--electric-blue);
 }
+
+/* Nombre y foto */
 .head {
     display: flex;
     align-items: center;
-    position: relative;
     height: 60px;
     border-radius: 30px;
 }
-
 #facetop {
     padding: 5px;
     margin: 0;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
 }
 #facetop img {
     border-radius: 50%;
@@ -52,23 +56,38 @@ nav {
     background-color: var(--soft-blue);
 }
 nav .head #nametop {
-    position: absolute;
-    left: 60px;
-    top: 15px;
+    height: 100%;
     margin-right: 0;
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0;
 }
+nav .head #nametop:hover {
+    background-color: var(--soft-blue);
+}
+nav .head #nametop img {
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* Opciones de contacto */
 #options {
     display: flex;
+    padding: 0 5px;
+    box-sizing: border-box;
+    justify-content: space-evenly;
     align-items: center;
+    justify-self: end;
 }
 .keywords {
     border: 0;
     font-family: 'Ubuntu', sans-serif;;
     background-color: var(--electric-blue);
     color: var(--sky-blue);
+    height: 100%;
+    margin: 0 5px;
+    padding: 0 5px;
 }
 .keywords:hover {
     background-color: var(--soft-blue);
