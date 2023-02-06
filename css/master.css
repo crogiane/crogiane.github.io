@@ -32,6 +32,7 @@ nav {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: var(--electric-blue);
+    overflow: hidden;
 }
 
 /* Nombre y foto */
@@ -91,4 +92,24 @@ nav .head #nametop img {
 }
 .keywords:hover {
     background-color: var(--soft-blue);
+}
+
+@media (max-width: 800px) {
+    nav {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: 100%;
+    }
+    .head {
+        justify-content: space-evenly;
+        padding: 5px 5px 0;
+    }
+    #options {
+        width: 100%;
+    }
+    .keywords {
+        padding: 5px;
+        border-radius: 5px;
+    }
+
 }
