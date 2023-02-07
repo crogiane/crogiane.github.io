@@ -19,10 +19,12 @@
     --small: 14px;
     --medium: 16px;
     --large: 18px;
+    --nav-height: 60px;
 }
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
+    font-size: var(--small);
     background-color: var(--electric-blue);
     color: var(--sky-blue);
 }
@@ -31,12 +33,19 @@ body {
 }
 
 /* Navbar general */
+header {
+    height: var(--nav-height);
+}
 nav {
     display: grid;
     grid-template-columns: auto auto;
     height: 60px;
     background-color: var(--electric-blue);
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--gray-blue);
 }
 
 /* Nombre y foto */
@@ -87,6 +96,7 @@ nav .main-nav #nametop img {
 }
 .keywords {
     border: 0;
+    font-size: var(--medium);
     font-family: 'Ubuntu', sans-serif;;
     background-color: var(--electric-blue);
     color: var(--sky-blue);
@@ -98,10 +108,31 @@ nav .main-nav #nametop img {
     background-color: var(--soft-blue);
 }
 
-@media (max-width: 600px) {
+/* Cuerpo */
+.main-content {
+    margin: 16px 16px 0;
+}
+/* .home-screen {
+    background-color: yellow;
+}
+.about-me-screen {
+    background-color: green;
+}
+.blog-screen {
+    background-color: red;
+}
+.social-media-screen {
+    background-color: blue;
+} */
+
+@media (max-width: 800px) {
+    header {
+        height: 100%;
+    }
     nav {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
+        position: initial;
         height: 100%;
     }
     .main-nav {
