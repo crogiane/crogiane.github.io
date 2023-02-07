@@ -12,6 +12,7 @@
     --blue3: #256D85;
     --blue4: #22577E;
     --blue5: #5584AC;
+    --blue6: #205E61;
     --green0: #95D1CC;
     --white2: #F6F2D4;
     --white3: #D8E3E7;
@@ -22,6 +23,11 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
+    background-color: var(--electric-blue);
+    color: var(--sky-blue);
+}
+.inactive {
+    display: none;
 }
 
 /* Navbar general */
@@ -29,14 +35,12 @@ nav {
     display: grid;
     grid-template-columns: auto auto;
     height: 60px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     background-color: var(--electric-blue);
     overflow: hidden;
 }
 
 /* Nombre y foto */
-.head {
+.main-nav {
     display: flex;
     align-items: center;
     height: 60px;
@@ -56,24 +60,24 @@ nav {
 #facetop:hover {
     background-color: var(--soft-blue);
 }
-nav .head #nametop {
+nav .main-nav #nametop {
     height: 100%;
     margin-right: 0;
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0;
 }
-nav .head #nametop:hover {
+nav .main-nav #nametop:hover {
     background-color: var(--soft-blue);
 }
-nav .head #nametop img {
+nav .main-nav #nametop img {
     height: 100%;
     padding: 5px;
     box-sizing: border-box;
 }
 
 /* Opciones de contacto */
-#options {
+#options-nav {
     display: flex;
     padding: 0 5px;
     box-sizing: border-box;
@@ -94,18 +98,19 @@ nav .head #nametop img {
     background-color: var(--soft-blue);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     nav {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         height: 100%;
     }
-    .head {
-        justify-content: space-evenly;
+    .main-nav {
+        justify-content: center;
         padding: 5px 5px 0;
     }
-    #options {
+    #options-nav {
         width: 100%;
+        justify-content: center;
     }
     .keywords {
         padding: 5px;
@@ -113,3 +118,4 @@ nav .head #nametop img {
     }
 
 }
+
