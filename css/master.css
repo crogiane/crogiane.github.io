@@ -34,15 +34,18 @@ body {
 
 /* Navbar general */
 header {
-    height: var(--nav-height);
+    height: 100%;
 }
 nav {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    position: initial;
+    height: 100%;
+    
+    
     display: grid;
-    grid-template-columns: auto auto;
-    height: 60px;
     background-color: var(--electric-blue);
     overflow: hidden;
-    position: fixed;
     top: 0;
     width: 100%;
     border-bottom: 1px solid var(--gray-blue);
@@ -50,6 +53,9 @@ nav {
 
 /* Nombre y foto */
 .main-nav {
+    justify-content: center;
+    /* padding: 5px 5px 0; */
+
     display: flex;
     align-items: center;
     height: 60px;
@@ -75,6 +81,7 @@ nav .main-nav #nametop {
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0;
+    cursor: pointer;
 }
 nav .main-nav #nametop:hover {
     background-color: var(--soft-blue);
@@ -87,14 +94,19 @@ nav .main-nav #nametop img {
 
 /* Opciones de contacto */
 #options-nav {
+    width: 100%;
+    justify-content: center;
+
     display: flex;
     padding: 0 5px;
     box-sizing: border-box;
-    justify-content: space-evenly;
     align-items: center;
     justify-self: end;
 }
 .keywords {
+    padding: 5px;
+    border-radius: 5px;
+
     border: 0;
     font-size: var(--medium);
     font-family: 'Ubuntu', sans-serif;;
@@ -102,9 +114,12 @@ nav .main-nav #nametop img {
     color: var(--sky-blue);
     height: 100%;
     margin: 0 5px;
-    padding: 0 5px;
+    cursor: pointer;
 }
 .keywords:hover {
+    color: var(--gray-blue);
+}
+.keywords:active {
     background-color: var(--soft-blue);
 }
 
@@ -112,41 +127,24 @@ nav .main-nav #nametop img {
 .main-content {
     margin: 16px 16px 0;
 }
-/* .home-screen {
-    background-color: yellow;
-}
-.about-me-screen {
-    background-color: green;
-}
-.blog-screen {
-    background-color: red;
-}
-.social-media-screen {
-    background-color: blue;
-} */
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
     header {
-        height: 100%;
+        height: var(--nav-height);
     }
     nav {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        position: initial;
-        height: 100%;
+        grid-template-columns: auto auto;
+        position: fixed;
+        height: 60px;
     }
     .main-nav {
-        justify-content: center;
-        padding: 5px 5px 0;
+        justify-content: start;
     }
     #options-nav {
-        width: 100%;
-        justify-content: center;
+        justify-content: end;
     }
     .keywords {
-        padding: 5px;
-        border-radius: 5px;
+        padding: 0 5px;
     }
-
 }
 
